@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="com.*">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <mvc:default-servlet-handler default-servlet-name="default"/>
+    <mvc:resources location="/WEB-INF/" mapping="/css/**"/>
+    <mvc:resources location="/WEB-INF/" mapping="/image/**"/>
+    <mvc:resources location="/WEB-INF/" mapping="/js/**"/>
+    <mvc:resources location="/WEB-INF/" mapping="/style/**"/>
+    <mvc:resources location="/WEB-INF/" mapping="/upload/**"/>
+    <mvc:resources location="/WEB-INF/" mapping="/audio/**"/>
+
+    <!-- 第四步:建立jsp试图解析器 -->
+    <bean id="jspResourceViewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--第五步:mvc默认控制器 -->
+    <mvc:view-controller path="/sys/background/login"
+                         view-name="jsp/background/login"/>
+
+    <!-- 第六步:拦截器 -->
+    <!-- <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/**" />
+            <mvc:mapping path="/code/**" />
+            <mvc:mapping path="/employee/**" />
+            <mvc:mapping path="/order/**" />
+            <mvc:mapping path="/pointRecord/**" />
+            <mvc:mapping path="/scode/**" />
+            <mvc:mapping path="/seed/**" />
+            <mvc:mapping path="/request/**" />
+            <mvc:exclude-mapping path="/seed/add" />
+            <mvc:exclude-mapping path="/seed/informationLoadOne" />
+            <mvc:exclude-mapping path="/seed/exist" />
+            <mvc:exclude-mapping path="/request/intergral" />
+            <mvc:exclude-mapping path="/request/snowing" />
+            <mvc:exclude-mapping path="/request/login" />
+            <mvc:exclude-mapping path="/user/login" />
+            <mvc:exclude-mapping path="/user/logout" />
+            <mvc:exclude-mapping path="/pointRecord/add" />
+            <mvc:exclude-mapping path="/js/**" />
+            <mvc:exclude-mapping path="/css/**" />
+            <mvc:exclude-mapping path="/image/**" />
+            <mvc:exclude-mapping path="/upload/**" />
+            <bean class="com.yjkj.framework.base.interceptor.SessionInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+ -->
+    <!-- 多文件上传 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600"/>
+        <property name="maxInMemorySize" value="4096"/>
+        <property name="defaultEncoding" value="UTF-8"></property>
+    </bean>
+    <!-- FreeMarker视图解析器  -->
+    <bean id="freemarkerResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="order" value="1"/>
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html;charset=utf-8"/>
+        <property name="requestContextAttribute" value="request"/>
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.freemarker.FreeMarkerView</value>
+        </property>
+    </bean>
+
+    <!-- freemarker的配置 -->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath">
+            <value>/WEB-INF/view/</value>
+        </property>
+        <property name="freemarkerSettings"><!-- 设置FreeMarker环境属性 -->
+            <props>
+                <prop key="template_update_delay">5</prop><!--刷新模板的周期，单位为秒 -->
+                <prop key="default_encoding">UTF-8</prop><!--模板的编码格式 -->
+                <prop key="locale">UTF-8</prop><!-- 本地化设置 -->
+                <prop key="datetime_format">yyyy-MM-dd</prop>
+                <prop key="time_format">HH:mm:ss</prop>
+                <prop key="number_format">0.####</prop>
+                <prop key="boolean_format">true,false</prop>
+                <prop key="whitespace_stripping">true</prop>
+                <prop key="tag_syntax">auto_detect</prop>
+                <prop key="url_escaping_charset">UTF-8</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

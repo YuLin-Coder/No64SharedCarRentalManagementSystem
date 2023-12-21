@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+@import "base.css";
+
+/*class*/
+.classlist li {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #ebebeb;
+	background: #fcfcfc;
+}
+
+.classlist li:hover {
+	border: 1px solid #3eafe0;
+	cursor: pointer;
+}
+
+.classlist li span {
+	float: left;
+	margin-right: 18px;
+	border: 3px solid #fff;
+}
+
+.classlist li .lright {
+	float: left;
+	width: 150px;
+}
+
+.classlist li .lright h2 {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.classlist li .lright p {
+	line-height: 20px;
+}
+
+.enter {
+	display: block;
+	margin-top: 5px;
+	width: 94px;
+	height: 30px;
+	color: #fff;
+	background: #3eafe0;
+	font-weight: bold;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.enter:hover {
+	color: #fff;
+	background: #d98c1d;
+}
+
+.clear {
+	clear: both;
+}

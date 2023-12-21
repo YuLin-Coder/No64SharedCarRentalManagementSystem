@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+@import "base.css";
+
+.place {
+	height: 40px;
+	background: url(../../../image/background/images/righttop.gif) repeat-x;
+}
+
+.place span {
+	line-height: 40px;
+	font-weight: bold;
+	float: left;
+	margin-left: 12px;
+}
+
+.placeul li {
+	float: left;
+	line-height: 40px;
+	padding-left: 7px;
+	padding-right: 12px;
+	background: url(../../../image/background/images/rlist.gif) no-repeat
+		right;
+}
+
+.placeul li:last-child {
+	background: none;
+}
+
+.rightinfo {
+	padding: 8px;
+}
+
+.tools {
+	clear: both;
+	height: 35px;
+	margin-bottom: 8px;
+}
+
+.toolbar {
+	float: left;
+}
+
+.toolbar li {
+	background: url(../../../image/background/images/toolbg.gif) repeat-x;
+	line-height: 33px;
+	height: 33px;
+	border: solid 1px #d3dbde;
+	float: left;
+	padding-right: 10px;
+	margin-right: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.toolbar li span {
+	float: left;
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.toolbar1 {
+	float: right;
+}
+
+.toolbar1 li {
+	background: url(../../../image/background/images/toolbg.gif) repeat-x;
+	line-height: 33px;
+	height: 33px;
+	border: solid 1px #d3dbde;
+	float: left;
+	padding-right: 10px;
+	margin-left: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.toolbar1 li span {
+	float: left;
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-top: 5px;
+}

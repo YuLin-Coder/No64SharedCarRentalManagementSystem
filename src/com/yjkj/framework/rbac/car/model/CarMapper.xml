@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.yjkj.framework.rbac.car.dao.CarDao">
+	<resultMap type="com.yjkj.framework.rbac.car.model.Car" id="carMap">
+	<association property="type" column="type_id" javaType="com.yjkj.framework.rbac.type.model.Type" select="com.yjkj.framework.rbac.type.dao.TypeDao.informationLoadOne"></association>
+	</resultMap>
+	<select id="informationLoad" parameterType="java.util.HashMap"
+		resultMap="carMap">
+		SELECT
+		*
+		FROM
+		car 
+		<where>
+			<if test="car.code != null and car.code != ''">
+				code LIKE CONCAT(CONCAT('%', #{car.code}), '%')
+			</if>
+			<if test="car.searchName != null and car.searchName != ''">
+				AND (CONCAT(name,stand,price) LIKE CONCAT(CONCAT('%', #{car.searchName}), '%') OR type_id IN(SELECT id FROM type WHERE name LIKE CONCAT(CONCAT('%', #{car.searchName}), '%')))
+			</if>
+			<if test="car.status != null and car.status != ''">
+				AND status = #{car.status}
+			</if>
+		</where>
+		ORDER BY
+		id
+		DESC
+		LIMIT
+		#{pager.offSet},#{pager.pageSize}
+	</select>
+	<select id="informationLoadAll"
+		resultMap="carMap">
+		SELECT
+		*
+		FROM
+		car
+		WHERE
+		status='1'
+		ORDER BY
+		id
+		DESC
+	</select>
+	<select id="count" resultType="int">
+		SELECT
+		COUNT(*)
+		FROM
+		car
+		<where>
+			<if test="code != null and code != ''">
+				code LIKE CONCAT(CONCAT('%', #{code}), '%')
+			</if>
+			<if test="status != null and status != ''">
+				AND status = #{status}
+			</if>
+			<if test="searchName != null and searchName != ''">
+				AND (CONCAT(name,stand,price) LIKE CONCAT(CONCAT('%', #{searchName}), '%') OR type_id IN(SELECT id FROM type WHERE name LIKE CONCAT(CONCAT('%', #{searchName}), '%')))
+			</if>
+		</where>
+	</select>
+	<select id="informationLoadOne"  resultMap="carMap">
+		SELECT
+		*
+		FROM
+		car
+		WHERE
+		id=#{id}
+	</select>
+
+
+	<delete id="informationDelete" >
+		DELETE FROM
+		car
+		WHERE id=#{id}
+	</delete>
+
+
+	<insert id="informationAdd" parameterType="com.yjkj.framework.rbac.car.model.Car">
+		INSERT INTO
+		car
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="type_id != null">
+				type_id,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="stand != null">
+				stand,
+			</if>
+			<if test="address != null">
+				address,
+			</if>
+			<if test="url != null">
+				url,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="code != null">
+				code,
+			</if>
+			<if test="factory != null">
+				factory,
+			</if>
+			<if test="price != null">
+				price,
+			</if>
+			<if test="createtime != null">
+				createtime,
+			</if>
+			<if test="flag != null">
+				flag,
+			</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id},
+			</if>
+			<if test="type_id != null">
+				#{type_id},
+			</if>
+			<if test="name != null">
+				#{name},
+			</if>
+			<if test="stand != null">
+				#{stand},
+			</if>
+			<if test="address != null">
+				#{address},
+			</if>
+			<if test="url != null">
+				#{url},
+			</if>
+			<if test="status != null">
+				#{status},
+			</if>
+			<if test="code != null">
+				#{code},
+			</if>
+			<if test="factory != null">
+				#{factory},
+			</if>
+			<if test="price != null">
+				#{price},
+			</if>
+			<if test="createtime != null">
+				#{createtime},
+			</if>
+			<if test="flag != null">
+				#{flag},
+			</if>
+		</trim>
+	</insert>
+	<update id="informationUpdate" parameterType="com.yjkj.framework.rbac.car.model.Car">
+		UPDATE
+		car
+		<set>
+			<if test="type_id != null">
+				type_id=#{type_id},
+			</if>
+			<if test="name != null">
+				name=#{name},
+			</if>
+			<if test="stand != null">
+				stand=#{stand},
+			</if>
+			<if test="address != null">
+				address=#{address},
+			</if>
+			<if test="status != null">
+				status=#{status},
+			</if>
+			<if test="code != null">
+				code=#{code},
+			</if>
+			<if test="factory != null">
+				factory=#{factory},
+			</if>
+			<if test="url != null">
+				url=#{url},
+			</if>
+			<if test="price != null">
+				price=#{price},
+			</if>
+			<if test="createtime != null">
+				createtime=#{createtime},
+			</if>
+			<if test="flag != null">
+				flag=#{flag},
+			</if>
+		</set>
+		WHERE id=#{id}
+	</update>
+</mapper>

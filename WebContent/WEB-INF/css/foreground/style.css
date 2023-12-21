@@ -1,0 +1,21 @@
+
+/* ==��ʾ��ʽ== */
+
+.msgdiv {color:#336699;padding-left:53px;background:url(../../image/foreground/chk_msg-2.gif) 30px no-repeat;}
+.errdiv {color:#FF0000;padding-left:53px;background:url(../../image/foreground/chk_error-2.gif) 30px no-repeat;}
+.rightdiv {color:#505050;padding-left:53px;background:url(../../image/foreground/chk_right-2.gif) 30px no-repeat;}
+.noticediv{display:none;border:1px #fc5959 solid;background:#FFFDF4 url(../../image/foreground/chk_error-2.gif) 10px no-repeat;padding-left:33px;line-height:25px;margin:3px 0px}
+.okdiv{display:none;border:1px #fc5959 solid;background:#FFFDF4 url(../../image/foreground/chk_right-2.gif) 10px no-repeat;padding-left:33px;line-height:25px;margin:3px 0px}
+
+
+
+
+/* ============��ʾ��Ϣ����============== */
+div#alert {display:none;cursor:default;}
+div#alert .border{border:1px #97A0AA solid;}
+div#alert .ntc{padding:30px;text-align:center;background:#fff;font: 14px/1.6 Verdana, Arial, Helvetica, sans-serif;}
+div#alert .buttonzone{padding:15px;text-align:center;padding-top:10px;background:#f7f7f7;}
+div#alert .topBar{height:20px;line-height:20px;background:#cbddef;text-align:left;padding:0px 0px 5px 5px ;font-size:12px;}
+div#alert .topBar .pwClose{position: absolute;top:0px;right:8px;width:45px;height:18px;background:url(../../image/foreground/pwin3-2.gif) no-repeat;cursor:pointer}
+
+

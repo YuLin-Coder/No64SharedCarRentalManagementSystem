@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.yjkj.framework.rbac.introduce.dao.IntroduceDao">
+	<resultMap type="com.yjkj.framework.rbac.introduce.model.Introduce" id="introduceMap">
+	</resultMap>
+	<select id="informationLoad" parameterType="java.util.HashMap"
+		resultMap="introduceMap">
+		SELECT
+		*
+		FROM
+		introduce 
+		ORDER BY
+		id
+		DESC
+		LIMIT
+		#{pager.offSet},#{pager.pageSize}
+	</select>
+	<select id="informationLoadAll" parameterType="java.util.HashMap"
+		resultMap="introduceMap">
+		SELECT
+		*
+		FROM
+		introduce 
+		ORDER BY
+		id
+		DESC
+	</select>
+	<select id="count" resultType="int">
+		SELECT
+		COUNT(*)
+		FROM
+		introduce
+	</select>
+	<select id="informationLoadOne"  resultMap="introduceMap">
+		SELECT
+		*
+		FROM
+		introduce
+		WHERE
+		id=#{id}
+	</select>
+
+
+	<delete id="informationDelete" >
+		DELETE FROM
+		introduce
+		WHERE
+		id=#{id}
+	</delete>
+
+
+	<insert id="informationAdd" parameterType="com.yjkj.framework.rbac.introduce.model.Introduce">
+		INSERT INTO
+		introduce
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="text != null">
+				text,
+			</if>
+			<if test="flag != null">
+				flag,
+			</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id},
+			</if>
+			<if test="text != null">
+				#{text},
+			</if>
+			<if test="flag != null">
+				#{flag},
+			</if>
+		</trim>
+	</insert>
+	<update id="informationUpdate" parameterType="com.yjkj.framework.rbac.introduce.model.Introduce">
+		UPDATE
+		introduce
+		<set>
+			<if test="id != null">
+				id=#{id},
+			</if>
+			<if test="text != null">
+				text=#{text},
+			</if>
+			<if test="flag != null">
+				flag=#{flag},
+			</if>
+		</set>
+		WHERE id=#{id}
+	</update>
+</mapper>

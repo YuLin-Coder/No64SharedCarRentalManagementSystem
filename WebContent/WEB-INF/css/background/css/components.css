@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/**设置H5的placeholder属性的样式*/
+/* 通用 */
+::-webkit-input-placeholder {
+	color: #3c95c8;
+	font-size: 11px;
+}
+
+::-moz-placeholder {
+	color: #3c95c8;
+	font-size: 14px;
+}
+
+/* firefox 19+ */
+:-ms-input-placeholder {
+	color: #3c95c8;
+	font-size: 8px;
+}
+
+/* ie */
+input:-moz-placeholder {
+	color: #3c95c8;
+	font-size: 14px;
+}
+
+/**对code单独设置颜色*/
+#code::-webkit-input-placeholder {
+	color: #FFFFFF;
+}
+
+#code::-moz-placeholder {
+	color: #FFFFFF;
+}
+
+/* webkit专用 */
+#field2::-webkit-input-placeholder {
+	color: #00f;
+}
+
+#field3::-webkit-input-placeholder {
+	color: #090;
+	background: lightgreen;
+	text-transform: uppercase;
+}
+
+#field4::-webkit-input-placeholder {
+	font-style: italic;
+	text-decoration: overline;
+	letter-spacing: 11px;
+	color: #999;
+}
+
+/* mozilla专用 */
+#field2::-moz-placeholder {
+	color: #00f;
+}
+
+#field3::-moz-placeholder {
+	color: #090;
+	background: lightgreen;
+	text-transform: uppercase;
+}
+
+#field4::-moz-placeholder {
+	font-style: italic;
+	text-decoration: overline;
+	letter-spacing: 3px;
+	color: #999;
+}

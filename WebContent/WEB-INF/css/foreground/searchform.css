@@ -1,0 +1,21 @@
+/* ============ËÑË÷±íµ¥============== */
+div.shopsearchform{
+height:24px;
+} 
+
+div.shopsearchform div.searchform{
+float:left;
+padding:0px 3px 0px 0px;
+line-height:24px;
+color:#ffffff;
+
+}
+
+div.shopsearchform div.searchform .input{
+border:1px #a30c0f solid;
+height:18px;
+line-height:18px;
+padding:0px 3px;
+background:#ffffff;
+color:#505050;
+}

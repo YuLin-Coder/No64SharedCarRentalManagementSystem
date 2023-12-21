@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import "base.css";
+
+.project {
+	height: 50px;
+	background: #3eafe0;
+	border-radius: 3px;
+	margin-bottom: 15px;
+}
+
+.project li {
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	line-height: 50px;
+	background: url(../../../image/background/images/bz00.jpg) no-repeat
+		right;
+	height: 50px;
+	position: relative;
+	min-width: 120px;
+}
+
+.project li b {
+	font-size: 20px;
+	font-weight: normal;
+	padding-right: 6px;
+}
+
+.project li i {
+	width: 17px;
+	padding-left: 8px;
+	position: absolute;
+	height: 50px;
+	right: 0;
+	top: 0;
+}
+
+.project li span {
+	width: 17px;
+	position: absolute;
+	height: 50px;
+	left: 0;
+}
+
+.prover i {
+	background: none !important;
+}
+
+.profinish {
+	color: #000 !important;
+}
+
+.profinish i {
+	background: url(../../../image/background/images/bz02.jpg) no-repeat
+		right;
+	height: 50px;
+	line-height: 50px;
+}
+
+.start {
+	background: #67d100 !important;;
+}
+
+.start i {
+	background: url(../../../image/background/images/bz01.jpg) no-repeat
+		right;
+}
+
+.proleft {
+	font-size: 16px;
+	line-height: 50px;
+	background: #d4e7f0;
+	width: 92px;
+	float: left;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.prosearch {
+	margin-top: 20px;
+	clear: both;
+	padding-left: 3px;
+	margin-bottom: 8px;
+	overflow: hidden;
+	height: 35px;
+}
+
+.prosearch li {
+	float: left;
+	margin-right: 30px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.prosearch label {
+	font-weight: bold;
+	font-size: 14px;
+	height: 32px;
+	line-height: 32px;
+	float: left;
+}
+
+.prosearch li i {
+	display: block;
+	float: left;
+	line-height: 32px;
+	font-style: normal;
+	padding-right: 10px;
+}
+
+.prosearch li a {
+	display: block;
+	float: left;
+	padding-right: 20px;
+}

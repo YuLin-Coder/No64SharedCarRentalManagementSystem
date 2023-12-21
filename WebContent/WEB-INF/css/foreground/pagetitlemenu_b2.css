@@ -1,0 +1,26 @@
+div.titlemenu_b2{
+margin:0;
+padding:0;
+}
+
+div.titlemenu_b2 a.titlemenu_b2:link,div.titlemenu_b2 a.titlemenu_b2:visited,div.titlemenu_b2 a.titlemenu_b2:active{
+display:block;
+width:100%;
+color: #393939; 
+text-decoration: none;
+font:14px/35px Verdana, Arial, Helvetica, sans-serif;
+text-align:center;
+background:#f7f7f7;
+border-bottom:1px #e0e0e0 solid;
+}
+
+div.titlemenu_b2 a.titlemenu_b2:hover{
+display:block;
+width:100%;
+color: #393939; 
+text-decoration: none;
+font:14px/35px Verdana, Arial, Helvetica, sans-serif;
+text-align:center;
+background:#f0f0f0;
+border-bottom:1px #e0e0e0 solid;
+}

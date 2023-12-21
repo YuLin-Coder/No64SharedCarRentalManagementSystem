@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+@import "base.css";
+
+html, body, .backAdmin {
+	height: 100%;
+	overflow: hidden;
+}
+
+.backAdmin .top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 52px;
+	background-color: #000000
+}
+
+.backAdmin .left {
+	position: absolute;
+	left: 0;
+	top: 52px;
+	bottom: 20px;
+	width: 187px;
+}
+
+.backAdmin .right {
+	position: absolute;
+	left: 187px;
+	right: 0;
+	top: 52px;
+	bottom: 20px;
+	overflow: auto;
+}
+
+.backAdmin .right .inner {
+	min-height: 1000px;
+}
+
+.right .inner .mainIframe {
+	
+}
+
+.backAdmin .bottom {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 20px;
+}
+
+/*处理顶部样式CSS样式 START*/
+.top .topleft {
+	background: url("../../../image/background/images/topleft.jpg")
+		no-repeat;
+	float: left;
+	width: 320px;
+}
+
+.top .topleft img {
+	margin-top: 10px;
+	margin-left: 12px;
+}
+
+.top .nav {
+	float: left;
+	position: absolute;
+	left: 320px;
+}
+
+.top .nav li {
+	float: left;
+	width: 87px;
+	height: 88px;
+	text-align: center;
+}
+
+.top .nav li a {
+	display: block;
+	width: 87px;
+	height: 88px;
+	-moz-transition: none;
+	transition: background-color 0.3s linear;
+	-moz-transition: background-color 0.3s linear;
+	-webkit-transition: background-color 0.3s linear;
+	-o-transition: background-color 0.3s linear;
+}
+
+.top .nav li a.selected {
+	background: url(.../../../image/background/images/navbg.png) no-repeat;
+}
+
+.top .nav li a.selected h2 {
+	color: gold;
+}
+
+.top .nav li a:hover {
+	display: block;
+	background: #000;
+	color: #fff;
+	background: none repeat scroll 0% 0% rgb(43, 127, 181);
+}
+
+.top .nav li img {
+	margin-top: 10px;
+}
+
+.top .nav li a {
+	display: block;
+}
+
+.top .nav a h2 {
+	font-size: 14px;
+	color: #d6e8f1;
+}
+
+.top .nav a:hover h2 {
+	color: #FB7155;
+	font-size: 15px;
+}
+
+.top .topright {
+	float: right;
+}
+
+.top .topright ul {
+	padding-top: 15px;
+	float: right;
+	padding-right: 12px;
+}
+
+.top .topright ul li {
+	float: left;
+	padding-left: 9px;
+	padding-right: 9px;
+	background: url("../../../image/background/images/line.gif") no-repeat
+		right;
+}
+
+.top .topright ul li p {
+	margin-left: 2px;
+	float: right;
+	background: url(../../../image/background/images/msg.png) no-repeat;
+	display: block;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	text-align: center;
+	color: #FFF;
+}
+
+.top .topright ul li:last-child {
+	background: none;
+}
+
+.top .topright ul li a {
+	font-size: 13px;
+	color: #e9f2f7;
+}
+
+.top .topright ul li a:hover {
+	color: #fff;
+}
+
+.top .topright ul li span {
+	float: left;
+	padding-right: 3px;
+}
+
+.top .topright .user {
+	height: 40px;
+	margin-top: 5px;
+	float: right;
+	clear: both;
+	padding-right: 20px;
+}
+
+.top .topright .user img {
+	float: left;
+	border-radius: 50%;
+	height: 40px;
+}
+
+.top .topright .user span {
+	float: left;
+	display: block;
+	line-height: 40px;
+	font-size: 14px;
+	color: #b8ceda;
+	font-weight: 900;
+	padding-left: 10px;
+}
+
+.top .topright .user b {
+	float: left;
+	display: block;
+	width: 20px;
+	height: 40px;
+	background: url(../../../image/background/images/msg.png) no-repeat;
+	text-align: center;
+	font-weight: normal;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 15px;
+	margin-top: 10px;
+	margin-left: 7px;
+}
+
+/*处理顶部样式CSS样式 END*/
+
+/*导航列表 START*/
+.left {
+	background: #f0f9fd;
+}
+
+.left .lefttop {
+	background: url(../../../image/background/images/lefttop.gif) repeat-x;
+	height: 40px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 40px;
+	width: 187px;
+}
+
+.left .lefttop i {
+	margin-left: 8px;
+	margin-top: 7px;
+	margin-right: 8px;
+	float: left;
+}
+
+.left .leftmenu {
+	width: 187px;
+	overflow: hidden;
+	background: url(../../../image/background/images/leftline.gif) repeat-y
+		right;
+}
+
+.left .leftmenu dd {
+	background: url(../../../image/background/images/leftmenubg.gif)
+		repeat-x;
+	line-height: 35px;
+	font-weight: bold;
+	font-size: 14px;
+	border-right: solid 1px #b7d5df;
+}
+
+.left .leftmenu dd .title i {
+	float: left;
+	margin: 5px 3px 0 12px;
+}
+
+.left .leftmenu dd .menuson {
+	display: none;
+}
+
+.left .leftmenu dd:first-child .menuson {
+	display: block;
+}
+
+.left .menuson {
+	line-height: 30px;
+	font-weight: normal;
+}
+
+.left .menuson li {
+	cursor: pointer;
+}
+
+.left .menuson li.active {
+	position: relative;
+	background: url(../../../image/background/images/libg.png) repeat-x;
+	line-height: 30px;
+	color: #fff;
+}
+
+.left .menuson li i {
+	float: left;
+	margin: 10px 5px 0 28px;
+}
+
+.left .menuson li a {
+	display: block;
+	*display: inline;
+	*padding-top: 5px;
+}
+
+.left .menuson li.active a {
+	color: #fff;
+	font-size: 15px;
+	font-weight: 900;
+}
+
+.left .title {
+	cursor: pointer;
+}
+
+/*导航列表 END  二级列表未使用*/
+
+/*页面底部 footer */
+.bottom {
+	background: #f0f9fd;
+	height: 20px;
+	border-top: solid 1px #c2d2d7;
+	line-height: 20px;
+	color: #98a4a9;
+}
+
+.bottom span {
+	display: block;
+	float: left;
+	background: url(../../../image/background/images/info.png) no-repeat
+		11px 2px;
+	padding-left: 35px;
+}
+
+.bottom i {
+	display: block;
+	float: right;
+	font-style: normal;
+	margin-right: 10px;
+	background: url(../../../image/background/images/fjt.png) no-repeat
+		right;
+	padding-right: 12px;
+}
+
+.scroll-wrapper {
+	-webkit-overflow-scrolling: touch;
+	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: scroll;
+	/* 提示: 请在此处加上需要设置的大小(dimensions)或位置(positioning)信息! */
+}
+/*页面底部 footer */

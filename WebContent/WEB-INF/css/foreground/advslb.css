@@ -1,0 +1,80 @@
+.clssMainRoll {
+	FILTER: progid:DXImageTransform.Microsoft.Slide(slidestyle=SWAP,Bands=1); CURSOR: pointer
+}
+em{font-style:normal;}
+
+#floatBoxBg{
+display:none;width:100%;height:100%;background:#000;position:absolute;top:0;left:0;}
+.floatBox{border:#666 5px solid;width:300px;position:absolute;top:50px;left:40%;}
+.floatBox .title{height:23px;padding:7px 10px 0;background:#333;color:#fff;}
+.floatBox .title h4{float:left;padding:0;margin:0;font-size:14px;line-height:16px;}
+.floatBox .title span{float:right;cursor:pointer;}
+.floatBox .content{padding:20px 15px;background:#fff;
+}
+#MainPromotionBanner{
+	width:100%;
+	height:100%;
+	background:#fff;
+}
+#SlidePlayer {
+	position:relative;
+	margin: 0 auto;
+}
+#MainPromotionBanner .Slides{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height:100%;
+	overflow: hidden;
+}
+#MainPromotionBanner .Slides li {
+	float: left;
+	width:100%;
+	height:100%;
+}
+
+#MainPromotionBanner .Slides img{
+	border:0;
+	display: block;
+	width:100%;
+	height:100%;
+}
+
+#MainPromotionBanner .SlideTriggers{
+	margin: 0;
+	padding: 0;
+	list-style: none; 
+	position: absolute; 
+	top: 85%; 
+	right: 10px;
+	z-index: 10;
+	height: 35px;
+	
+}
+#MainPromotionBanner .SlideTriggers li{
+	float: left;
+	display: inline;
+	color: #74a8ed;
+	text-align: center;
+	line-height:16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: .9em;
+	cursor: pointer;
+	overflow: hidden; 
+	margin:3px 5px;
+	background: url(../../image/foreground/slide_trigger.gif) no-repeat center center;
+}
+#MainPromotionBanner .SlideTriggers li.Current{ 
+	color:#fff; 
+	background: url(../../image/foreground/slide_trigger_c.gif) no-repeat center center;
+	border:0; 
+	font-weight:bold;
+	font-size: 1.4em;
+	line-height: 21px;
+	height: 21px;
+	width: 21px;
+	margin:0px 5px; 
+}
+

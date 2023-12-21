@@ -1,0 +1,25 @@
+/*=========½Å×¢²Ëµ¥===========*/
+div#bottommenu{
+margin: 0;
+padding:0;
+border: 0;
+height: 28px;
+font:11px/28px SimSun;
+color:#333333;
+text-align:center;
+}
+
+
+div#bottommenu a:link,div#bottommenu a:visited,div#bottommenu a:active{
+margin:0px 5px 0px 2px;
+color:#333333;
+font:12px/28px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+}
+
+div#bottommenu a:hover{
+margin:0px 5px 0px 2px;
+color:#ff6600;
+font:12px/28px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: underline;
+}

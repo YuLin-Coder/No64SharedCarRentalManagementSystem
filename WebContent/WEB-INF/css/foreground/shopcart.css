@@ -1,0 +1,31 @@
+table.shopcart{
+border:1px #def solid;
+}
+
+table.shopcart td.cap{
+background:#f7fbfe;
+border-bottom:1px #def solid;
+}
+
+td.nogoods{
+background:url(../../image/foreground/alert.png) left center no-repeat;
+padding-left:23px;
+}
+
+input.cartacc{
+border:1px #ddd solid;
+height:18px;
+width:30px;
+line-height:18px;
+padding:0px 3px;
+color:#555;
+background:#f7f7f7;
+}
+
+td.shopcarttitle{
+height:27px;
+background:url(../../image/foreground/cartnow.gif) left center no-repeat;
+padding:8px 0px 0px 45px;
+font:12px/18px Verdana, Arial, Helvetica, sans-serif;
+color:#ffffff;
+}

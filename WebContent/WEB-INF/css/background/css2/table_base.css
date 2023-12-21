@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@import "base.css";
+
+.tablelist {
+	border: solid 1px #cbcbcb;
+	width: 100%;
+	clear: both;
+}
+
+.tablelist thead {
+	background: url(../../../image/background/images/th.gif) repeat-x;
+	height: 35px;
+}
+
+.tablelist th {
+	line-height: 35px;
+	border-bottom: solid 1px #b6cad2;
+	border-right: dotted 1px #c7c7c7;
+	text-indent: 12px;
+	text-align: center;
+}
+
+.tablelist th:first-child {
+	width: 45px;
+	text-align: left;
+}
+
+.tablelist tbody {
+	height: 35px;
+}
+
+.tablelist td {
+	line-height: 35px;
+	text-indent: 12px;
+	border-right: dotted 1px #c7c7c7;
+}
+
+.tablelist tbody td:first-child {
+	text-align: center;
+}
+
+.tablelist td i {
+	padding-right: 3px;
+}
+
+.tablelist td a {
+	color: green;
+	float: left;
+	display: block;
+	*display: inline;
+	*padding-top: 5px;
+}
+
+.tablelist td a:hover {
+	color: darkred;
+}
+
+.tablelink {
+	color: #056dae;
+}
+
+.tablelist tbody tr:nth-child(2n) {
+	background: #f5f8fa;
+}
+
+.tablelist tbody tr:hover {
+	background: #e5ebee;
+}
+
+.sort {
+	padding-left: 3px;
+}

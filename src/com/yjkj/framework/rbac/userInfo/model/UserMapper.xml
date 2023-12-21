@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yjkj.framework.rbac.userInfo.dao.UserInfoDao">
+	<resultMap type="com.yjkj.framework.rbac.userInfo.model.UserInfo"
+		id="userMap">
+		<id property="id" column="id" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="loginName" column="loginName" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="loginPassword" column="loginPassword" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="userName" column="userName" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="roleId" column="roleId" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="phoneNo" column="phoneNo" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="selfId" column="selfId"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+		<result property="recommendId" column="recommendId"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+		<result property="remark" column="remark"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+		<result property="createDate" column="createDate"
+			javaType="java.lang.String" jdbcType="DATE" />
+		<result property="flag" column="flag"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+		<association property="roleInfo" javaType="com.yjkj.framework.rbac.roleInfo.model.RoleInfo" column="roleId" select="com.yjkj.framework.rbac.roleInfo.dao.RoleInfoDao.queryOne"></association>
+		<collection property="functionRoleRel" ofType="com.yjkj.framework.rbac.functionRoleInfo.model.FunctionRoleRel" column="roleId" select="com.yjkj.framework.rbac.functionRoleInfo.dao.FunctionRoleRelDao.query"></collection>
+	</resultMap>
+
+<select id="loginUser" resultMap="userMap">
+	SELECT
+		*
+	FROM
+		User_info
+	<where>
+		loginName=#{loginName}
+		AND
+		loginPassword=#{loginPassword}
+		AND
+		selfId='1'
+	</where>
+</select>
+<insert id="userAdd">
+
+	INSERT INTO
+		User_info
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="id!=null and id!=''">
+			id,
+		</if>
+		<if test="loginName!=null and loginName!=''">
+			loginName,
+		</if>
+		<if test="loginPassword!=null and loginPassword!=''">
+			loginPassword,
+		</if>
+		<if test="userName!=null and userName!=''">
+			userName,
+		</if>
+		<if test="roleId!=null and roleId!=''">
+			roleId,
+		</if>
+		<if test="phoneNo!=null and phoneNo!=''">
+			phoneNo,
+		</if>
+		<if test="selfId!=null and selfId!=''">
+			selfId,
+		</if>
+		<if test="recommendId!=null and recommendId!=''">
+			recommendId,
+		</if>
+		<if test="remark!=null and remark!=''">
+			remark,
+		</if>
+		<if test="createDate!=null and createDate!=''">
+			createDate,
+		</if>
+		<if test="flag!=null and flag!=''">
+			flag,
+		</if>
+	</trim>
+	VALUES
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="id!=null and id!=''">
+			#{id},
+		</if>
+		<if test="loginName!=null and loginName!=''">
+			#{loginName},
+		</if>
+		<if test="loginPassword!=null and loginPassword!=''">
+			#{loginPassword},
+		</if>
+		<if test="userName!=null and userName!=''">
+			#{userName},
+		</if>
+		<if test="roleId!=null and roleId!=''">
+			#{roleId},
+		</if>
+		<if test="phoneNo!=null and phoneNo!=''">
+			#{phoneNo},
+		</if>
+		<if test="selfId!=null and selfId!=''">
+			#{selfId},
+		</if>
+		<if test="recommendId!=null and recommendId!=''">
+			#{recommendId},
+		</if>
+		<if test="remark!=null and remark!=''">
+			#{remark},
+		</if>
+		<if test="createDate!=null and createDate!=''">
+			#{createDate},
+		</if>
+		<if test="flag!=null and flag!=''">
+			#{flag},
+		</if>
+	</trim>
+	
+</insert>
+<select id="queryOne" resultMap="userMap">
+	SELECT
+		*
+	FROM
+		User_info
+	<where>
+		id=#{id}
+	</where>
+</select>
+<select id="queryRole" resultMap="userMap">
+	SELECT
+		*
+	FROM
+		User_info
+	<where>
+		roleId=#{roleId}
+	</where>
+</select>
+<select id="Query" resultMap="userMap" parameterType="java.util.HashMap">
+	SELECT
+		*
+	FROM
+		User_info
+	LIMIT 
+	#{pager.offSet},#{pager.pageSize}
+</select>
+
+<select id="queryAll" resultMap="userMap" parameterType="java.util.HashMap">
+	SELECT
+		*
+	FROM
+		User_info
+</select>
+<select id="queryCount" resultType="int">
+	SELECT
+		COUNT(*)
+	FROM
+		User_info
+</select>
+
+
+
+<delete id="userDelete">
+		DELETE
+		FROM
+			User_info
+		WHERE
+			id=#{id}
+</delete>
+
+<update id="userUpdate" parameterType="com.yjkj.framework.rbac.userInfo.model.UserInfo">
+		UPDATE
+		User_info
+		<set>
+		<if test="loginName!=null and loginName!=''">
+			loginName=#{loginName},
+		</if>
+		<if test="loginPassword!=null and loginPassword!=''">
+			loginPassword=#{loginPassword},
+		</if>
+		<if test="userName!=null and userName!=''">
+			userName=#{userName},
+		</if>
+		<if test="roleId!=null and roleId!=''">
+			roleId=#{roleId},
+		</if>
+		<if test="phoneNo!=null and phoneNo!=''">
+			phoneNo=#{phoneNo},
+		</if>
+		<if test="selfId!=null and selfId!=''">
+			selfId=#{selfId},
+		</if>
+		<if test="recommendId!=null and recommendId!=''">
+			recommendId=#{recommendId},
+		</if>
+		<if test="remark!=null and remark!=''">
+			remark=#{remark},
+		</if>
+		<if test="createDate!=null and createDate!=''">
+			createDate=#{createDate},
+		</if>
+		<if test="flag!=null and flag!=''">
+			flag=#{flag},
+		</if>
+		</set>
+		WHERE id=#{id}
+</update>
+</mapper>

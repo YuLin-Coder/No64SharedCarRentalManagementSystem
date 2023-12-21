@@ -1,0 +1,28 @@
+/* ============�����б�============== */
+div#commentList{border:0px;margin-bottom:10px;}
+div#commentList ul#commentUl{margin:0;padding:15px}
+div#commentList li{margin:0;padding:12px 3px;list-style-type: none;}
+div#commentList div.face{width:60px;height:60px;margin-right:15px;padding:3px;text-align:center;border:1px #ddd solid}
+div#commentList .capbg{height:30px;line-height:30px;text-align:center;background:#f7f7f7;}
+div#commentList .captitle{padding-left:25px;float:left;line-height:28px;background:url(../../image/foreground/cateitems-2.gif) 10px no-repeat;}
+div#commentList a.capmore {margin-right:5px;float:right;width:65px;text-align:center;height:28px;line-height:30px;cursor:pointer;background:url(../../image/foreground/an65-2.gif) left no-repeat;text-decoration: none;color:#555}
+div#commentList a.capmore:hover {background:url(../../image/foreground/an65_1-2.gif) left no-repeat;text-decoration: none;color:#555}
+div#commentList a.ctitle {color:#555;font:bold 12px/18px simsun}
+
+
+/* ============������============== */
+div#commentForm {padding:0px;border:0px; text-align:left}
+div#commentForm .formtitlebg{height:30px;line-height:30px;text-align:center;background:#f7f7f7;}
+div#commentForm .formtitle{padding-left:25px;float:left;line-height:28px;background:url(../../image/foreground/cateitems-2.gif) 10px no-repeat;}
+div#commentForm .formzone{margin:0;padding:15px;text-align:left;}
+div#commentForm .row{width:100%;padding:3px 0px;clear:both}
+div#commentForm .left{width:80px;float:left;text-align:center;padding:3px 5px}
+div#commentForm .con{float:left;text-align:left}
+
+
+
+
+.loginlink{cursor:pointer;text-decoration: underline}
+.logoutlink{cursor:pointer;text-decoration: underline}
+
+

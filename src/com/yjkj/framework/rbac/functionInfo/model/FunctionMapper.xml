@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yjkj.framework.rbac.functionInfo.dao.FunctionDao">
+	<resultMap type="com.yjkj.framework.rbac.functionInfo.model.FunctionInfo"
+		id="functionMap">
+		<id property="id" column="id" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="title" column="title" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="name" column="name" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="remark" column="remark"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+		<result property="url" column="url"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+		<result property="flag" column="flag"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+	</resultMap>
+<select id="QueryAll" resultMap="functionMap">
+	SELECT
+		*
+	FROM
+		Function_info
+	LIMIT 
+	#{pager.offSet},#{pager.pageSize}
+</select>
+<select id="query" resultMap="functionMap">
+	SELECT
+		*
+	FROM
+		Function_info
+</select>
+<select id="queryCount" resultType="int">
+	SELECT
+		COUNT(*)
+	FROM
+		Function_info
+</select>
+<select id="queryOne" resultMap="functionMap">
+	SELECT
+		*
+	FROM
+		Function_info
+	<where>
+		id=#{id}
+	</where>
+</select>
+<insert id="functionAdd">
+
+	INSERT INTO
+		Function_info
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="id!=null and id!=''">
+			id,
+		</if>
+		<if test="title!=null and title!=''">
+			title,
+		</if>
+		<if test="name!=null and name!=''">
+			name,
+		</if>
+		<if test="url!=null and url!=''">
+			url,
+		</if>
+		<if test="remark!=null and remark!=''">
+			remark,
+		</if>
+		<if test="flag!=null and flag!=''">
+			flag,
+		</if>
+	</trim>
+	VALUES
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="id!=null and id!=''">
+			#{id},
+		</if>
+		<if test="title!=null and title!=''">
+			#{title},
+		</if>
+		<if test="name!=null and name!=''">
+			#{name},
+		</if>
+		<if test="url!=null and url!=''">
+			#{url},
+		</if>
+		<if test="remark!=null and remark!=''">
+			#{remark},
+		</if>
+		<if test="flag!=null and flag!=''">
+			#{flag},
+		</if>
+	</trim>
+	
+</insert>
+<update id="functionUpdate" parameterType="com.yjkj.framework.rbac.functionInfo.model.FunctionInfo">
+		UPDATE
+		Function_info
+		<set>
+		<if test="title!=null and title!=''">
+			title=#{title},
+		</if>
+		<if test="name!=null and name!=''">
+			name=#{name},
+		</if>
+		<if test="url!=null and url!=''">
+			url=#{url},
+		</if>
+		<if test="remark!=null and remark!=''">
+			remark=#{remark},
+		</if>
+		<if test="flag!=null and flag!=''">
+			flag=#{flag},
+		</if>
+		</set>
+		WHERE id=#{id}
+</update>
+<delete id="functionDelete">
+		DELETE
+		FROM
+			Function_info
+		WHERE
+			id=#{id}
+</delete>
+</mapper>

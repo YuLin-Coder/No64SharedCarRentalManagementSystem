@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+@import "base.css";
+
+/*computer*/
+.comtitle {
+	padding: 20px;
+	clear: both;
+}
+
+.comtitle span {
+	width: 10px;
+	height: 10px;
+	background: url(../../../image/background/images/clist.png) no-repeat;
+	float: left;
+	background: #fff;
+	padding-top: 3px;
+}
+
+.comtitle h2 {
+	font-size: 14px;
+	display: block;
+	float: left;
+	color: #2a3e93;
+	background: #fff;
+	padding-left: 5px;
+	padding-right: 8px;
+}
+
+.rline {
+	border-bottom: solid 1px #e5ecf0;
+	height: 10px;
+	margin-left: 50px;
+}
+
+.disklist {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.disklist li {
+	width: 275px;
+	_width: 270px;
+	float: left;
+	margin-right: 10px;
+	height: 70px;
+	cursor: pointer;
+	margin-bottom: 5px;
+	border: solid 1px #fff;
+}
+
+.disklist li a {
+	color: #000;
+}
+
+.disklist li:hover {
+	background: #fcfcfc;
+	border: solid 1px #e5ecf0;
+}
+
+.dleft {
+	background: url(../../../image/background/images/c02.png) no-repeat;
+	height: 50px;
+	margin-left: 12px;
+	float: left;
+	width: 50px;
+	margin-top: 15px;
+}
+
+.dleft1 {
+	background: url(../../../image/background/images/c01.png) no-repeat;
+	height: 50px;
+	margin-left: 12px;
+	float: left;
+	width: 50px;
+	margin-top: 15px;
+}
+
+.dleft2 {
+	background: url(../../../image/background/images/c03.png) no-repeat;
+	height: 50px;
+	margin-left: 12px;
+	float: left;
+	width: 50px;
+	margin-top: 15px;
+}
+
+.dright {
+	float: left;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.dright h3 {
+	font-weight: normal;
+	padding-top: 15px;
+}
+
+.dright p {
+	color: #949494;
+}
+
+.dinfo {
+	width: 189px;
+	height: 15px;
+	background: url(../../../image/background/images/diskbg.png) no-repeat;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.dinfo span {
+	background: url(../../../image/background/images/cbg.png) repeat-x;
+	height: 15px;
+}

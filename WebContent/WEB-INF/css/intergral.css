@@ -1,0 +1,65 @@
+*{-webkit-tap-highlight-color: transparent;
+-webkit-appearance: none; margin:0; padding:0;}
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu,img{margin:0;padding:0;}
+body{ position:relative;}
+img{ display:block; margin:0;padding:0;}
+	#flag{position:absolute;top:0;}
+
+		.progress{
+		    height: 7px;
+		    border-radius: 0;
+		    box-shadow: none;
+		    overflow: visible;
+		    position: relative;
+		}
+		.progress .progress-bar{
+		    box-shadow: none;
+		    border-radius: 0;
+		    position: relative;
+		    -webkit-animation: animate-positive 5s;
+		    animation: animate-positive 5s;
+		}
+		.progress .progress-bar:after{
+		    content: "";
+		    width: 10%;
+		    height: 20p	x;
+		    border-radius: 50%;
+		    background: #ffcc00;
+		    position: absolute;
+		    right: -5px;
+		    top: -6px;
+		}
+		.progress .progress-value{
+		    width: 45px;
+		    height: 34px;
+		    line-height: 15px;
+		    border-radius: 3px;
+		    background: #393a3d;
+		    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+		    font-size: 15px;
+		    font-weight: 700;
+		    color: #fff;
+			padding-top:2px; 
+		    text-align: center;
+		    position: absolute;
+		    bottom: 20px;
+		    right: -15px;
+		}
+		.progress .progress-value:after{
+		    content: "";
+		    border-top: 7px solid #393a3d;
+		    border-left: 7px solid transparent;
+		    border-right: 7px solid transparent;
+		    position: absolute;
+		    bottom: -7px;
+		    left: 35%;
+		}
+		@-webkit-keyframes animate-positive{
+		    0% { width: 0; }
+		}
+		@keyframes animate-positive{
+		    0% { width: 0; }
+		}
+		#progress-bar{
+			width: 10%;
+		}

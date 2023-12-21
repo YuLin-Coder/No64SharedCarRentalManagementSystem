@@ -1,0 +1,35 @@
+/* ============≈≈––∞Ò============== */
+
+ul.shophotlist{
+margin:0px;
+padding:0px;
+}
+
+li.shophotlist {
+margin:0;
+list-style-type: none;
+font-weight:100;
+color:#505050;
+}
+
+a.shophotlist:link,a.shophotlist:visited,a.shophotlist:active{
+color:#505050;
+text-decoration: none;
+font:12px/22px simsun;
+}
+
+a.shophotlist:hover{
+color:#ff0000;
+text-decoration: underline;
+font:12px/22px simsun;
+}
+
+li.shophotlist div.price{
+float:right;
+color:#ff8100;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+img.addtocart{
+cursor:pointer;
+}

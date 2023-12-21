@@ -1,0 +1,40 @@
+/* ============�����б�============== */
+
+ul.bbslist{
+margin:0px;
+}
+
+li.bbslist {
+margin:0;
+padding:3px 0px;
+padding-left:16px;
+list-style-type: none;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+font-weight:100;
+color:#505050;
+background: transparent url(../../image/foreground/articleitems.gif) left no-repeat;
+}
+
+a.bbslist:link,a.bbslist:visited,a.bbslist:active{
+color:#505050;
+text-decoration: none;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+a.bbslist:hover{
+color:#ff0000;
+text-decoration: underline;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+li.bbslist a.pname:link,li.bbslist a.pname:visited,li.bbslist a.pname:active{
+color:#999;
+text-decoration: none;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+li.bbslist a.pname:hover{
+color:#ff0000;
+text-decoration: underline;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+}

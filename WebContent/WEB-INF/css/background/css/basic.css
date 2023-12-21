@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* CSS Document */
+/***
+ * 码迷码迷吽
+ * http://pangsir8983.github.io
+ * e-mail: hanpang8983@foxmail.com
+ */
+* {
+	font-size: 9pt;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/**关于字体,设置两种*/
+body {
+	font-family: 'Microsoft YaHei Mono', '微软雅黑';
+	margin: 0 auto;
+	min-width: 980px;
+}
+
+ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	border: 0;
+}
+
+dl, dt, dd, span {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+a, a:focus {
+	text-decoration: none;
+	color: #000;
+	outline: none;
+	blr: expression(this.onFocus = this.blur ());
+}
+
+a:hover {
+	color: orangered;
+	text-decoration: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+cite {
+	font-style: normal;
+}
+
+h2 {
+	font-weight: normal;
+}

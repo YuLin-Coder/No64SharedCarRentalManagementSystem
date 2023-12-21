@@ -1,0 +1,134 @@
+.shoptwoclass_brand_cap{
+height:24px;
+border-bottom:2px #930004 solid;
+}
+
+.shoptwoclass_brand_cat{
+width:91px;
+height:24px;
+float:left;
+cursor: pointer;
+background:url(../../image/foreground/cbcap.gif) 0px 0px no-repeat;  
+}
+
+.shoptwoclass_brand_cat_on{
+width:91px;
+height:24px;
+float:left;
+cursor: pointer;
+background:url(../../image/foreground/cbcap.gif) 0px -24px no-repeat;  
+}
+
+.shoptwoclass_brand_brand{
+width:89px;
+height:24px;
+float:left;
+cursor: pointer;
+background:url(../../image/foreground/cbcap.gif) -91px 0px no-repeat;  
+}
+
+.shoptwoclass_brand_brand_on{
+width:89px;
+height:24px;
+float:left;
+cursor: pointer;
+background:url(../../image/foreground/cbcap.gif) -91px -24px no-repeat;  
+}
+
+
+.shoptwoclass{
+border:1px #d4d4d4 solid; 
+}
+
+.shoptwoclass .shoptwoclass_top{ 
+clear:both;
+height:23px;
+color: #999999;
+background:url(../../image/foreground/catcap.gif) left repeat-x;  
+font:12px/23px Verdana, Arial, Helvetica, sans-serif;
+border-top:1px #d4d4d4 solid;
+border-bottom:1px #d4d4d4 solid;
+margin-top:-1px;
+}
+
+
+
+.shoptwoclass .shoptwoclass_top a{
+color: #505050;
+font:bold 12px/23px Verdana, Arial, Helvetica, sans-serif;
+padding-left:12px;
+text-decoration: none;
+}
+
+.shoptwoclass .shoptwoclass_top a:visited{
+color: #505050;
+text-decoration: none;
+}
+
+.shoptwoclass .shoptwoclass_top a:hover{ 
+color: #ff6600;
+text-decoration: underline;
+}
+
+.shoptwoclass .shoptwoclass_topright{
+float:right;
+width:24px;
+height:23px;
+background:url(../../image/foreground/catcap_1.gif) left no-repeat;  
+cursor: pointer;
+}
+
+.shoptwoclass .shoptwoclass_topright_open{
+float:right;
+width:24px;
+height:23px;
+background:url(../../image/foreground/catcap_2.gif) left no-repeat;  
+cursor: pointer;
+}
+
+
+.shoptwoclass ul{ 
+margin:12px 8px;
+padding:0px;
+background:#ffffff;
+height:40px;
+}
+
+.shoptwoclass ul li{
+list-style-type: none;
+float:left;
+height:40px;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+margin:0px; 
+padding:0px;
+color: #999999;
+white-space:nowrap;
+}
+
+.shoptwoclass ul li a{
+color: #505050;
+font:12px/22px Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+margin:0px 3px 0px 3px
+}
+
+.shoptwoclass ul li a:visited{
+color: #505050;
+}
+
+.shoptwoclass ul li a:hover{ 
+color: #ff6600;
+}
+
+.shoptwoclass_brand{
+display:none;
+border:1px #d4d4d4 solid; 
+text-align:center;
+}
+
+.shoptwoclass_brand li{
+list-style-type: none;
+border:1px #d4d4d4 solid; 
+margin:5px;
+text-align:left;
+}

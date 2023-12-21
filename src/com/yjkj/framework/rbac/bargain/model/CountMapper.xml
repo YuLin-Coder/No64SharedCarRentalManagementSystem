@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.yjkj.framework.rbac.bargain.dao.CountDao">
+	<resultMap type="com.yjkj.framework.rbac.bargain.model.Count" id="countMap">
+	</resultMap>
+	<select id="informationLoadNum"
+		resultMap="countMap">
+		SELECT
+		c.name as name,
+		SUM(b.num) as num
+		FROM
+		bargain b
+		LEFT JOIN
+		depot d
+		ON
+		d.id = b.depot_id
+		LEFT JOIN
+		car c
+		ON
+		c.id = d.car_id
+		WHERE
+		b.type = '2'
+		AND
+		b.status = '3'
+		GROUP BY
+		c.name
+		
+		ORDER BY
+		num
+		DESC
+	</select>
+	
+	<select id="informationLoadPrice"
+		resultMap="countMap">
+		SELECT
+		c.name as name,
+		SUM(b.price*b.num) as price
+		FROM
+		bargain b
+		LEFT JOIN
+		depot d
+		ON
+		d.id = b.depot_id
+		LEFT JOIN
+		car c
+		ON
+		c.id = d.car_id
+		WHERE
+		b.type = '2'
+		AND
+		b.status = '3'
+		GROUP BY
+		c.name
+		
+		ORDER BY
+		price
+		DESC
+	</select>
+</mapper>

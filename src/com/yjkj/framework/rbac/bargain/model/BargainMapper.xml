@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.yjkj.framework.rbac.bargain.dao.BargainDao">
+	<resultMap type="com.yjkj.framework.rbac.bargain.model.Bargain" id="bargainMap">
+	<association property="userInfo" column="user_id" javaType="com.yjkj.framework.rbac.userInfo.model.UserInfo" select="com.yjkj.framework.rbac.userInfo.dao.UserInfoDao.queryOne"></association>
+	<association property="car" column="car_id" javaType="com.yjkj.framework.rbac.car.model.Car" select="com.yjkj.framework.rbac.car.dao.CarDao.informationLoadOne"></association>
+	</resultMap>
+	<select id="informationLoad" parameterType="java.util.HashMap"
+		resultMap="bargainMap">
+		SELECT
+		*
+		FROM
+		bargain 
+		<where>
+			<if test="bargain.type != null and bargain.type != ''">
+			 	type = #{bargain.type}
+			</if>
+			<if test="bargain.flag != null and bargain.flag != ''">
+			 	AND flag = #{bargain.flag}
+			</if>
+			<if test="bargain.user_id != null and bargain.user_id != ''">
+			 	AND user_id = #{bargain.user_id}
+			</if>
+		</where>
+		ORDER BY
+		id
+		DESC
+		LIMIT
+		#{pager.offSet},#{pager.pageSize}
+	</select>
+	<select id="informationLoadAll"
+		resultMap="bargainMap">
+		SELECT
+		*
+		FROM
+		bargain 
+		ORDER BY
+		id
+		DESC
+	</select>
+	<select id="count" resultType="int">
+		SELECT
+		COUNT(*)
+		FROM
+		bargain
+		<where>
+			<if test="type != null and type != ''">
+			 	type = #{type}
+			</if>
+			<if test="flag != null and flag != ''">
+			 	AND flag = #{flag}
+			</if>
+			<if test="user_id != null and user_id != ''">
+			 	AND user_id = #{user_id}
+			</if>
+		</where>
+	</select>
+	<select id="informationLoadOne"  resultMap="bargainMap">
+		SELECT
+		*
+		FROM
+		bargain
+		WHERE
+		id=#{id}
+	</select>
+
+
+	<delete id="informationDelete" >
+		DELETE
+		FROM
+		bargain
+		WHERE
+		id=#{id}
+	</delete>
+
+
+	<insert id="informationAdd" parameterType="com.yjkj.framework.rbac.bargain.model.Bargain">
+		INSERT INTO
+		bargain
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="code != null">
+				code,
+			</if>
+			<if test="car_id != null">
+				car_id,
+			</if>
+			<if test="user_id != null">
+				user_id,
+			</if>
+			<if test="price != null">
+				price,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="createtime != null">
+				createtime,
+			</if>
+			<if test="return_time != null">
+				return_time,
+			</if>
+			<if test="flag != null">
+				flag,
+			</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id},
+			</if>
+			<if test="code != null">
+				#{code},
+			</if>
+			<if test="car_id != null">
+				#{car_id},
+			</if>
+			<if test="user_id != null">
+				#{user_id},
+			</if>
+			<if test="price != null">
+				#{price},
+			</if>
+			<if test="type != null">
+				#{type},
+			</if>
+			<if test="status != null">
+				#{status},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="createtime != null">
+				#{createtime},
+			</if>
+			<if test="return_time != null">
+				#{return_time},
+			</if>
+			<if test="flag != null">
+				#{flag},
+			</if>
+		</trim>
+	</insert>
+	<update id="informationUpdate" parameterType="com.yjkj.framework.rbac.bargain.model.Bargain">
+		UPDATE
+		bargain
+		<set>
+			<if test="code != null">
+				code=#{code},
+			</if>
+			<if test="car_id != null">
+				car_id=#{car_id},
+			</if>
+			<if test="user_id != null">
+				user_id=#{user_id},
+			</if>
+			<if test="price != null">
+				price=#{price},
+			</if>
+			<if test="type != null">
+				type=#{type},
+			</if>
+			<if test="status != null">
+				status=#{status},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="createtime != null">
+				createtime=#{createtime},
+			</if>
+			<if test="return_time != null">
+				return_time=#{return_time},
+			</if>
+			<if test="flag != null">
+				flag=#{flag},
+			</if>
+		</set>
+		WHERE id=#{id}
+	</update>
+</mapper>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.yjkj.framework.rbac.custom.dao.CustomDao">
+	<resultMap type="com.yjkj.framework.rbac.custom.model.Custom" id="customMap">
+	<association property="userInfo" column="user_id" javaType="com.yjkj.framework.rbac.userInfo.model.UserInfo" select="com.yjkj.framework.rbac.userInfo.dao.UserInfoDao.queryOne"></association>
+	</resultMap>
+	<select id="informationLoad" parameterType="java.util.HashMap"
+		resultMap="customMap">
+		SELECT
+		*
+		FROM
+		custom 
+		WHERE
+		flag = '1'
+		ORDER BY
+		id
+		DESC
+		LIMIT
+		#{pager.offSet},#{pager.pageSize}
+	</select>
+	<select id="informationLoadAll"
+		resultMap="customMap">
+		SELECT
+		*
+		FROM
+		custom 
+		ORDER BY
+		id
+		DESC
+	</select>
+	<select id="count" resultType="int">
+		SELECT
+		COUNT(*)
+		FROM
+		custom
+	</select>
+	<select id="informationLoadOne"  resultMap="customMap">
+		SELECT
+		*
+		FROM
+		custom
+		WHERE
+		id=#{id}
+	</select>
+	
+	<select id="informationLoadOneUser"  resultMap="customMap">
+		SELECT
+		*
+		FROM
+		custom
+		WHERE
+		user_id=#{user_id}
+	</select>
+
+
+	<delete id="informationDelete" >
+		DELETE FROM
+		custom
+		WHERE id=#{id}
+	</delete>
+
+
+	<insert id="informationAdd" parameterType="com.yjkj.framework.rbac.custom.model.Custom">
+		INSERT INTO
+		custom
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="user_id != null">
+				user_id,
+			</if>
+			<if test="age != null">
+				age,
+			</if>
+			<if test="sex != null">
+				sex,
+			</if>
+			<if test="address != null">
+				address,
+			</if>
+			<if test="pledge != null">
+				pledge,
+			</if>
+			<if test="card != null">
+				card,
+			</if>
+			<if test="remark != null">
+				remark,
+			</if>
+			<if test="createtime != null">
+				createtime,
+			</if>
+			<if test="flag != null">
+				flag,
+			</if>
+		</trim>
+		VALUES
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id},
+			</if>
+			<if test="name != null">
+				#{name},
+			</if>
+			<if test="user_id != null">
+				#{user_id},
+			</if>
+			<if test="age != null">
+				#{age},
+			</if>
+			<if test="sex != null">
+				#{sex},
+			</if>
+			<if test="address != null">
+				#{address},
+			</if>
+			<if test="pledge != null">
+				#{pledge},
+			</if>
+			<if test="card != null">
+				#{card},
+			</if>
+			<if test="remark != null">
+				#{remark},
+			</if>
+			<if test="createtime != null">
+				#{createtime},
+			</if>
+			<if test="flag != null">
+				#{flag},
+			</if>
+		</trim>
+	</insert>
+	<update id="informationUpdate" parameterType="com.yjkj.framework.rbac.custom.model.Custom">
+		UPDATE
+		custom
+		<set>
+			<if test="name != null">
+				name=#{name},
+			</if>
+			<if test="user_id != null">
+				user_id=#{user_id},
+			</if>
+			<if test="age != null">
+				age=#{age},
+			</if>
+			<if test="sex != null">
+				sex=#{sex},
+			</if>
+			<if test="address != null">
+				address=#{address},
+			</if>
+			<if test="pledge != null">
+				pledge=#{pledge},
+			</if>
+			<if test="card != null">
+				card=#{card},
+			</if>
+			<if test="remark != null">
+				remark=#{remark},
+			</if>
+			<if test="createtime != null">
+				createtime=#{createtime},
+			</if>
+			<if test="flag != null">
+				flag=#{flag},
+			</if>
+		</set>
+		WHERE id=#{id}
+	</update>
+</mapper>

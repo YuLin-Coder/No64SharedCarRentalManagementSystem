@@ -1,0 +1,84 @@
+/*page*/
+.pagin {
+	position: relative;
+	margin-top: 10px;
+	padding: 0 12px;
+}
+
+.pagin .blue {
+	color: #056dae;
+	font-style: normal;
+}
+
+.pagin .paginList {
+	position: absolute;
+	right: 12px;
+	top: 0;
+}
+
+.pagin .paginList .paginItem {
+	float: left;
+}
+
+.pagin .paginList .paginItem a {
+	float: left;
+	width: 31px;
+	height: 28px;
+	border: 1px solid #DDD;
+	text-align: center;
+	line-height: 30px;
+	border-left: none;
+	color: #3399d5;
+}
+
+.pagin .paginList .paginItem:first-child a {
+	border-left: 1px solid #DDD;
+}
+
+.pagin .paginList .paginItem:first-child a {
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.pagin .paginList .paginItem:last-child a {
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.pagin .paginList .paginItem.current, .pagin .paginList .paginItem.current a
+	{
+	background: #f5f5f5;
+	cursor: default;
+	color: #737373;
+}
+
+.pagin .paginList .paginItem:hover {
+	background: #f5f5f5;
+}
+
+.pagin .paginList .paginItem.more, .pagin .paginList .paginItem.more a:hover
+	{
+	cursor: default;
+}
+
+.pagin .paginList .paginItem.more:hover {
+	background: #FFF;
+}
+
+.pagin .paginList .paginItem.more a {
+	color: #737373;
+}
+
+.pagepre {
+	background: url(../../../image/background/images/pre.gif) no-repeat
+		center center;
+	width: 31px;
+	height: 28px;
+}
+
+.pagenxt {
+	background: url(../../../image/background/images/next.gif) no-repeat
+		center center;
+	width: 31px;
+	height: 28px;
+}

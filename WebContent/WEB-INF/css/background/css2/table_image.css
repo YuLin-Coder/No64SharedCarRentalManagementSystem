@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import "base.css";
+
+.imgtable {
+	width: 100%;
+	border: solid 1px #cbcbcb;
+}
+
+.imgtable th {
+	background: url(../../../image/background/images/th.gif) repeat-x;
+	height: 34px;
+	line-height: 34px;
+	border-bottom: solid 1px #b6cad2;
+	text-indent: 21px;
+	text-align: left;
+}
+
+.imgtable td {
+	line-height: 20px;
+	text-indent: 21px;
+	border-right: dotted 1px #c7c7c7;
+}
+
+.imgtable td img {
+	margin: 10px 20px 10px 0;
+	width: 80px;
+	height: 60px;
+}
+
+.imgtable td p {
+	color: #919191;
+}
+
+.imgtable td i {
+	font-style: normal;
+	color: #ea2020;
+}
+
+.imgtd {
+	text-indent: 0;
+}
+
+.imgtable tbody tr:nth-child(2n) {
+	background: #f5f8fa;
+}
+
+.imgtable tbody tr.active {
+	background: lightgreen;
+}

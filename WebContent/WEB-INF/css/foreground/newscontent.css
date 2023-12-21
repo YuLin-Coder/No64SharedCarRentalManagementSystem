@@ -1,0 +1,169 @@
+/* ============��������============== */
+
+div#newscontent{
+text-align:left;
+}
+
+div#newscontent .newstitle{
+	font-size:22px;
+    font-weight: bold;
+	line-height:100px;
+	text-align:center;
+}
+
+div#newscontent .info{
+height:28px;
+line-height:28px;
+border:1px #e8e8e8 solid;
+margin:0px 0px;
+text-align:center;
+background-color:#f7f7f7;
+}
+
+
+div#newscontent .memo{
+margin:20px 0px 0px 0px;
+padding:15px;
+text-align: left;
+font: 12px/18px Verdana, Arial, Helvetica, sans-serif;
+border:1px #ddd dotted;
+text-align:left;
+background-color:#fff;
+}
+
+div#newscontent .con{
+margin:30px 0px;
+text-align: left;
+font: 14px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div#newscontent .con p,div#newscontent .con a{
+font: 14px/22px Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+div#newscontent .bzone{
+clear:both;
+margin:30px 0px;
+text-align: left;
+}
+
+
+div#newscontent div.down{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../../image/foreground/downfile.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+}
+
+div#newscontent div.down span#downlink{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+line-height:22px;
+cursor:pointer;
+text-decoration: underline;
+}
+
+div#newscontent .tags{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../../image/foreground/tags-2.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+}
+
+div#newscontent .source{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../../image/foreground/source-2.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+}
+
+div#newscontent .addfav{
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../../image/foreground/fav-2.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+cursor:pointer;
+}
+
+div#newscontent #zhichi{
+cursor:pointer;
+background:url(../../image/foreground/zhichi-2.gif) right no-repeat;
+padding-right:12px;
+}
+
+div#newscontent #fandui{
+cursor:pointer;
+background:url(../../image/foreground/fandui-2.gif) right no-repeat;
+padding-right:12px;
+}
+
+
+div#newscontent .banzhu{
+display:none;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+background:url(../../image/foreground/banzhu-2.gif) left no-repeat;
+padding-left:23px;
+height:22px;
+line-height:22px;
+}
+
+div#newscontent .banzhu span{
+cursor:pointer;
+}
+
+
+
+/* ============��ҳ============== */
+
+div#contentpages {
+margin:0;
+padding:0;
+height:39px;
+}
+
+
+div#contentpages ul{
+margin:0;
+padding:0;
+}
+
+
+div#contentpages li{
+margin:3px;
+list-style-type: none;
+float:left;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+color:#505050;
+border:1px #cde6ff solid;
+white-space: nowrap;
+padding:2px 5px;
+cursor:pointer;
+background-color:#fff;
+}
+
+div#contentpages li.pagesnow{
+color:#505050;
+border:1px #cde6ff solid;
+background-color:#e4f2ff;
+cursor:pointer;
+}
+
+div#contentpages li.pbutton{
+color:#505050;
+background-color:#e4f2ff;
+padding:2px 6px 2px 6px;
+cursor:pointer;
+}
+
+div#contentpages li.cbutton{
+color:#505050;
+background-color:#e4f2ff;
+padding:2px 6px 2px 6px;
+cursor:default;
+}
+
+

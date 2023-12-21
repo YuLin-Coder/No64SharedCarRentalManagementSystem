@@ -1,0 +1,37 @@
+
+
+
+
+
+/* ============�����б�============== */
+
+ul.newsclass{
+margin:0px;
+}
+
+li.newsclass {
+margin:0;
+padding:3px 0px;
+padding-left:16px;
+list-style-type: none;
+font: 9px Verdana, Arial, Helvetica, sans-serif;
+font-weight:100;
+color:#909090;
+white-space: nowrap;
+background: transparent url(../../image/foreground/cateitems-3.gif) left no-repeat;
+}
+
+a.newsclass:link,a.newsclass:visited,a.newsclass:active{
+color:#505050;
+text-decoration: none;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+a.newsclass:hover{
+color:#ff0000;
+text-decoration: underline;
+font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+

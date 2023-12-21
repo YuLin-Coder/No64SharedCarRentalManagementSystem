@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yjkj.framework.rbac.functionRoleInfo.dao.FunctionRoleRelDao">
+	<resultMap type="com.yjkj.framework.rbac.functionRoleInfo.model.FunctionRoleRel"
+		id="functionRoleMap">
+		<id property="id" column="id" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="functionId" column="functionId" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="roleId" column="roleId" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="createDate" column="createDate"
+			javaType="java.lang.String" jdbcType="DATE" />
+		<result property="flag" column="flag"
+			javaType="java.lang.String" jdbcType="VARCHAR" />
+		<association property="functionInfo" javaType="com.yjkj.framework.rbac.functionInfo.model.FunctionInfo" column="functionId" select="com.yjkj.framework.rbac.functionInfo.dao.FunctionDao.queryOne"></association>
+		<association property="roleInfo" javaType="com.yjkj.framework.rbac.roleInfo.model.RoleInfo" column="roleId" select="com.yjkj.framework.rbac.roleInfo.dao.RoleInfoDao.queryOne"></association>
+	</resultMap>
+
+<select id="query" resultMap="functionRoleMap">
+	SELECT
+		*
+	FROM
+		Function_role_rel
+	<where>
+		roleId=#{roleId}
+	</where>
+</select>
+<insert id="functionRoleAdd">
+
+	INSERT INTO
+		Function_role_rel
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="id!=null and id!=''">
+			id,
+		</if>
+		<if test="functionId!=null and functionId!=''">
+			functionId,
+		</if>
+		<if test="roleId!=null and roleId!=''">
+			roleId,
+		</if>
+		<if test="createDate!=null and createDate!=''">
+			createDate,
+		</if>
+		<if test="flag!=null and flag!=''">
+			flag,
+		</if>
+	</trim>
+	VALUES
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="id!=null and id!=''">
+			#{id},
+		</if>
+		<if test="functionId!=null and functionId!=''">
+			#{functionId},
+		</if>
+		<if test="roleId!=null and roleId!=''">
+			#{roleId},
+		</if>
+		<if test="createDate!=null and createDate!=''">
+			#{createDate},
+		</if>
+		<if test="flag!=null and flag!=''">
+			#{flag},
+		</if>
+	</trim>
+	
+</insert>
+<delete id="roleIdDelete">
+		DELETE
+		FROM
+			Function_role_rel
+		WHERE
+			roleId=#{roleId}
+</delete>
+<select id="queryOne" resultMap="functionRoleMap">
+	SELECT
+		*
+	FROM
+		Function_role_rel
+	<where>
+		roleId=#{roleId}
+	</where>
+</select>
+<!-- <select id="queryOne" resultMap="userMap">
+	SELECT
+		*
+	FROM
+		user
+	<where>
+		id=#{id}
+	</where>
+</select>
+<select id="Query" resultMap="userMap" parameterType="java.util.HashMap">
+	SELECT
+		*
+	FROM
+		user
+	<where>
+		type='1'
+	</where>
+	LIMIT 
+	#{pager.offSet},#{pager.pageSize}
+</select>
+<select id="queryCount" resultType="int">
+	SELECT
+		COUNT(*)
+	FROM
+		user
+</select>
+
+<insert id="userAdd">
+
+	INSERT INTO
+		user
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="account!=null and account!=''">
+			account,
+		</if>
+		<if test="password!=null and password!=''">
+			password,
+		</if>
+		<if test="tel!=null and tel!=''">
+			tel,
+		</if>
+		<if test="address!=null and address!=''">
+			address,
+		</if>
+		<if test="type!=null and type!=''">
+			type,
+		</if>
+		<if test="email!=null and email!=''">
+			email,
+		</if>
+	</trim>
+	VALUES
+	<trim prefix="(" suffix=")" suffixOverrides=",">
+		<if test="account!=null and account!=''">
+			#{account},
+		</if>
+		<if test="password!=null and password!=''">
+			#{password},
+		</if>
+		<if test="tel!=null and tel!=''">
+			#{tel},
+		</if>
+		<if test="address!=null and address!=''">
+			#{address},
+		</if>
+		<if test="type!=null and type!=''">
+			#{type},
+		</if>
+		<if test="email!=null and email!=''">
+			#{email},
+		</if>
+	</trim>
+	
+</insert>
+
+<delete id="informationDelete" parameterType="int">
+		DELETE
+		FROM
+			user
+		WHERE
+			id=#{id}
+</delete>
+
+<update id="informationUpdate" parameterType="com.framework.rbac.user.model.User">
+		UPDATE
+		user
+		<set>
+			<if test="account!=null and account!=''">
+				account=#{account},
+			</if>
+			<if test="password!=null and password!=''">
+				password=#{password},
+			</if>
+			<if test="tel!=null and tel!=''">
+				tel=#{tel},
+			</if>
+			<if test="address!=null and address!=''">
+				address=#{address},
+			</if>
+			<if test="type!=null and type!=''">
+				type=#{type},
+			</if>
+			<if test="email!=null and email!=''">
+				email=#{email},
+			</if>
+		</set>
+		WHERE id=#{id}
+</update> -->
+</mapper>

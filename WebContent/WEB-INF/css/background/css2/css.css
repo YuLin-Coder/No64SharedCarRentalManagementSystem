@@ -1,0 +1,259 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+}
+
+* {
+	text-decoration: none;
+	list-style: none;
+}
+
+img {
+	border: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+.khxx_1 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	color: #333;
+	background-color: #edf6fa;
+	padding-left: 15px;
+	line-height: 40px;
+}
+
+.khxx_1 span {
+	font-weight: bold;
+}
+
+.khxx_1 a {
+	font-weight: normal;
+	color: #333;
+}
+
+.khxx_1 a:hover {
+	font-weight: normal;
+	color: #F00;
+}
+
+.khxx_2 {
+	margin-top: 10px;
+	padding: 0px;
+	font-size: 14px;
+	color: #333;
+	padding-left: 15px;
+	line-height: 25px;
+}
+
+.khxx_2 span {
+	float: left;
+}
+
+#gs {
+	width: 150px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+#kh {
+	width: 100px;
+	height: 29px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 29px;
+	float: left;
+	margin-left: 10px;
+}
+
+#fw {
+	width: 100px;
+	height: 29px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 29px;
+	float: left;
+	margin-left: 10px;
+}
+
+#cx {
+	width: 50px;
+	height: 29px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 29px;
+	float: left;
+	margin-left: 10px;
+}
+
+.khxx_3 {
+	margin-top: 20px;
+	padding: 0px;
+	padding-left: 15px;
+	line-height: 25px;
+	font-size: 14px;
+}
+
+.khxx_3 dl {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	margin-right: 10px;
+}
+
+.khxx_3 dl dt {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	line-height: 25px;
+	margin-right: 5px;
+}
+
+.khxx_3 dl dd {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	line-height: 25px;
+}
+
+.khxx_3 dl a {
+	color: #0066cc;
+}
+
+.khxx_3 dl a:hover {
+	text-decoration: underline;
+}
+
+.khxx_3 span {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.khxx_3 span a {
+	color: #0066cc;
+}
+
+.khxx_3 span a:hover {
+	text-decoration: underline;
+}
+
+#xz {
+	width: 120px;
+	height: 29px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 29px;
+	float: left;
+	margin-left: 10px;
+}
+
+#bf {
+	width: 120px;
+	height: 29px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 29px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#form2 {
+	float: left;
+}
+
+#rq1 {
+	margin-left: 10px;
+	float: left;
+	width: 100px;
+	height: 25px;
+	margin-right: 5px;
+	border: #a9a9a9 1px solid;
+}
+
+#rq2 {
+	margin-left: 5px;
+	float: left;
+	width: 100px;
+	height: 25px;
+	border: #a9a9a9 1px solid;
+}
+
+#ywy {
+	width: 150px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+#fpkh {
+	width: 70px;
+	height: 29px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	line-height: 29px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.tablelist {
+	border: solid 1px #cbcbcb;
+	width: 100%;
+	clear: both;
+	margin-top: 8px;
+}
+
+.tablelist th {
+	background: url(../images/th.gif) repeat-x;
+	height: 34px;
+	line-height: 34px;
+	border-bottom: solid 1px #b6cad2;
+	text-indent: 11px;
+	text-align: left;
+}
+
+.tablelist td {
+	line-height: 35px;
+	text-indent: 11px;
+	border-right: dotted 1px #c7c7c7;
+}
+
+.tablelink {
+	color: #056dae;
+}
+
+.tablelink:hover {
+	color: #F00;
+}
+
+.tablelist tbody tr.odd {
+	background: #f5f8fa;
+}
+
+.tablelist tbody tr:hover {
+	background: #e5ebee;
+}
+
+#x {
+	background-color: #f5f8fa;
+}
+
+#x:hover {
+	background: #e5ebee;
+}

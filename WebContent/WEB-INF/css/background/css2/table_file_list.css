@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@import "base.css";
+/**文件列表*/
+.filetable {
+	width: 100%;
+}
+
+.filetable thead tr {
+	background: #f5f9fb;
+	line-height: 35px;
+}
+
+.filetable thead tr th {
+	text-align: left;
+	text-indent: 15px;
+	font-weight: normal;
+	color: #597190;
+}
+
+.filetable tbody tr td {
+	text-indent: 15px;
+	line-height: 23px;
+}
+
+.filetable tbody tr td img {
+	margin-right: 5px;
+}
+
+.tdlast {
+	text-align: right;
+}
+
+.filetable tbody tr:hover {
+	background: #f5f8fa;
+	cursor: pointer;
+}

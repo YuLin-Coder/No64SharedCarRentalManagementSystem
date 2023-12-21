@@ -1,0 +1,29 @@
+/* ============�����б�============== */
+
+ul.shopclass{
+margin:0px;
+padding:0px;
+}
+
+li.shopclass {
+float:left;
+margin-right:12px;
+padding-left:16px;
+list-style-type: none;
+white-space: nowrap;
+background: transparent url(../../image/foreground/li-3.gif) left no-repeat;
+}
+
+
+
+a.shopclass:link,a.shopclass:visited,a.shopclass:active{
+color:#555;
+text-decoration: none;
+font: 12px/18px simsun;
+}
+
+a.shopclass:hover{
+color:#ff0000;
+text-decoration: underline;
+font: 12px/18px simsun;
+}

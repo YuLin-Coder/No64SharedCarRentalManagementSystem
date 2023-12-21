@@ -1,0 +1,33 @@
+/* ============��������============== */
+
+#commentquery {margin:0;border-bottom:1px #def solid}
+#commentquery ul{margin:0;padding:0}
+#commentquery li{list-style-type: none;padding-left:10px;height:35px;}
+#commentquery li.cap{border-bottom:1px #def solid;background:#F7FBFF}
+#commentquery .cbi{float:left;height:35px;width:38px;text-align:center}
+#commentquery .binew{float:left;height:35px;width:38px;text-align:center;background:url(../../image/foreground/bbs_new.gif) 5px no-repeat;}
+#commentquery .bi{float:left;height:35px;width:38px;text-align:center;background:url(../../image/foreground/foreground/bbs.gif) 5px no-repeat;}
+#commentquery .bt{float:left;line-height:35px;margin-right:20px;}
+#commentquery .bt a{font: 12px Verdana, Arial, Helvetica, sans-serif;line-height:35px;}
+#commentquery .bk{float:right;width:180px;line-height:35px;}
+#commentquery .bk a{line-height:35px;}
+#commentquery .au{float:right;width:90px;line-height:35px;}
+#commentquery .au a{line-height:35px;}
+#commentquery .cl{float:right;width:90px;line-height:35px;}
+
+
+/* ============������============== */
+
+div#commentForm {padding:1px;border:1px #D9ECFF solid; margin:0px -1px;text-align:left}
+div#commentForm .formtitlebg{height:30px;line-height:30px;border-bottom:1px #D9ECFF solid;text-align:center;background:#F7FBFF;}
+div#commentForm .formtitle{padding-left:25px;float:left;line-height:28px;background:url(../../image/foreground/cateitems-3.gif) 10px no-repeat;}
+div#commentForm .formzone{margin:0;padding:15px;text-align:left;}
+div#commentForm .row{width:100%;padding:3px 0px;clear:both}
+div#commentForm .left{width:90px;float:left;text-align:center;padding:3px 5px}
+div#commentForm .con{float:left;text-align:left}
+
+
+
+
+.loginlink{cursor:pointer;text-decoration: underline}
+.logoutlink{cursor:pointer;text-decoration: underline}
